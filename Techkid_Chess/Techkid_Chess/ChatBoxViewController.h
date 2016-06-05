@@ -12,5 +12,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtInputChatText;
 @property (weak, nonatomic) IBOutlet UIButton *btnSend;
 - (IBAction)btnSendTouchUpInside:(id)sender;
+- (IBAction)btnBackClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UIView *background;
+@property (weak, nonatomic) IBOutlet UITableView *tblChatDetail;
+
 
 @end

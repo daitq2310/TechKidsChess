@@ -33,7 +33,7 @@
 - (void)checkLifeOfAdjacentEnemyStones:(int)rowValue andForColumnValue:(int)columnValue;
 - (void)checkLifeOfStone:(int)rowValue andForColumnValue:(int)columnValue;
 - (void)killStones:(NSMutableArray *)stonesToKill;
-- (void)back;
+//- (void)back;
 - (void)markStoneClusterAsDeadFor:(int)rowValue andForColumnValue:(int)columnValue andForColor:(NSString*)color;
 - (void)playMoveAtRow:(int)row column:(int)column forColor:(NSString *)color;
 

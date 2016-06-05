@@ -10,5 +10,6 @@
 
 @interface ChatCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *lblChatTextLeft;
+@property (weak, nonatomic) IBOutlet UILabel *lblChatTextRight;
 - (id) initChatCell;
 @end

@@ -9,6 +9,7 @@
 #import "GameViewController.h"
 #import "ChatRoomViewController.h"
 #import "Utils.h"
+#import "DataManager.h"
 
 @interface GameViewController () <ChatRoomViewControllerDelegate>
 @property (nonatomic) BOOL currentlyMarkingStonesAsDead;
@@ -22,7 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self startTimer];
-    self.socketRoom = [[ChatRoomViewController alloc] initWithUserName:self.username room:@"co_vay_01"];
+    self.socketRoom = [[ChatRoomViewController alloc] initWithUserName:self.username room:@"co_vay_69"];
     [self.socketRoom startSocket];
     self.socketRoom.delegate = self;
     
@@ -36,23 +37,37 @@
 
 
 
+- (void) newGame {
+    
+}
+
+
 #pragma mark - Using socket
 - (void) handleMessage:(NSDictionary *)val;
 {
     NSLog(@"ANOTHER USER SEND YOU MESSAGE %@", val);
     
     NSDictionary *dictValue = [Utils dictByJSONString:val[@"message"]];
-    NSDictionary *dictValueAgain = [Utils dictByJSONString:val[@"messageAgain"]];
+    //NSDictionary *dictValueAgain = [Utils dictByJSONString:val[@"messageAgain"]];
     int rowNumber = [dictValue[@"rowValue"] intValue];
-    int columnNumber = [dictValue[@"columValue"] intValue];
-    int waiting = [dictValueAgain[@"waiting"] intValue];
+    int columnNumber = [dictValue[@"columnValue"] intValue];
+
+    //int waiting = [dictValueAgain[@"waiting"] intValue];
+    NSString *owner_id = dictValue[@"playerId"];
+    if (owner_id != _username || ![owner_id isEqualToString:_username]) {
+        [self.view setUserInteractionEnabled:YES];
+        [self drawNewMoveWithColumnNumber:columnNumber andRowNumber:rowNumber];
+        
+    }
+
     
-    [self drawNewMoveWithColumnNumber:columnNumber andRowNumber:rowNumber];
-//    if (waiting == 1) {
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Play Again" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-//        [alert show];
-//        [self viewDidLoad];
-//    }
+
+    
+    //    if (waiting == 1) {
+    //        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Play Again" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    //        [alert show];
+    //        [self viewDidLoad];
+    //    }
     
     
     
@@ -99,7 +114,7 @@
             [self playMoveAtRow:rowNumber column:columnNumber forColor:GobanWhiteSpotString];
         }
     }
-
+    
 }
 
 
@@ -107,6 +122,12 @@
 
 #pragma mark - UIGestureRecognizers
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+//    if ([StaticData shareInstance].lastUserId == self.userid) {
+//        return;
+//    }
+    
+    
+    
     int rowValue = 0;
     int columnValue = 0;
     for (UITouch *touch in touches) {
@@ -114,14 +135,13 @@
         rowValue = (int)floor(touchPoint.x / stoneSize);
         columnValue = (int)floor((touchPoint.y - GobanMiddleOffsetSize) / stoneSize);
     }
-    
     [self drawNewMoveWithColumnNumber:columnValue andRowNumber:rowValue];
     
-    NSDictionary *dictData = @{@"rowValue": @(rowValue),  @"columValue": @(columnValue)};
+    NSDictionary *dictData = @{@"rowValue" : @(rowValue), @"columnValue": @(columnValue), @"playerId" : self.socketRoom.userName};
     NSString *strData = [Utils stringJSONByDictionary:dictData];
     
     [self.socketRoom.socket emit:@"message" withItems:@[strData, self.socketRoom.roomName, self.socketRoom.userName]];
-    
+    [self.view setUserInteractionEnabled:NO];
     
     [Goban printBoardToConsole:self.game.goban];
     _count++;
@@ -248,7 +268,7 @@
     self.whiteRemainingTimeLabel.textColor = [UIColor blackColor];
     self.blackRemainingTimeLabel.textColor = [UIColor blackColor];
     self.view.backgroundColor = [UIColor whiteColor];
-
+    
 }
 
 
@@ -260,7 +280,7 @@
     int points = 0;
     NSMutableArray *emptySpaces = [[NSMutableArray alloc] init];
     NSString *addingPointsFor = [[NSMutableString alloc] init];
-
+    
     //Turn off mark stones as dead
     [self setCurrentlyMarkingStonesAsDead:NO];
     
@@ -346,25 +366,31 @@
         title = @"Tie?";
     }
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                    message:pointTally
-                                                   delegate:self
-                                          cancelButtonTitle:cancelButtonTitle
-                                          otherButtonTitles:playAgainButtleTitle, nil];
-    alert.tag = 1;
-    [alert show];
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:title
+                                 message:pointTally
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* btnCancel = [UIAlertAction
+                                actionWithTitle:cancelButtonTitle
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action)
+                                {
+                                    
+                                }];
+    UIAlertAction* btnPlayAgain = [UIAlertAction
+                                   actionWithTitle:playAgainButtleTitle
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction * action)
+                                   {
+                                       [self viewDidLoad];
+                                   }];
+    
+    [alert addAction:btnCancel];
+    [alert addAction:btnPlayAgain];
+    
+    [self presentViewController:alert animated:YES completion:nil];
 }
-
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
-    if (alertView.tag == 1) {
-        if (buttonIndex == 1) {
-            [self viewDidLoad];
-        }
-    }
-}
-
-
 
 
 #pragma mark - Game Clock
@@ -435,6 +461,7 @@
     NSString *title = nil;
     NSString *message = nil;
     NSString *cancelButtonTitle = @"OK";
+    NSString *playAgainButtonTitle = @"Play Again";
     if([self.game.turn isEqualToString:GobanBlackSpotString]) {
         title = @"White Wins!";
         message = @"Black ran out of time!";
@@ -444,13 +471,32 @@
         message = @"White ran out of time!";
     }
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
-                                                    message:message
-                                                   delegate:nil
-                                          cancelButtonTitle:cancelButtonTitle
-                                          otherButtonTitles:nil];
-    [alert show];
-
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:title
+                                  message:message
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* btnCancel = [UIAlertAction
+                                actionWithTitle:cancelButtonTitle
+                                style:UIAlertActionStyleDefault
+                                handler:^(UIAlertAction * action)
+                                {
+                                    
+                                }];
+    
+    UIAlertAction* btnPlayAgain = [UIAlertAction
+                                   actionWithTitle:playAgainButtonTitle
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction * action)
+                                   {
+                                       
+                                   }];
+    
+    [alert addAction:btnCancel];
+    [alert addAction:btnPlayAgain];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
 }
 
 
@@ -490,15 +536,15 @@
 
 #pragma mark - Play Again
 - (void) btnPlayAgainTouchUpInside : (id) sender{
-//    int waiting = 1;
-//    if (true) {
-//        NSDictionary *dictData = @{@"waiting":@(waiting)};
-//        NSString *strData = [Utils stringJSONByDictionary:dictData];
-//        
-//        [self.socketRoom.socket emit:@"messageAgain" withItems:@[strData, self.socketRoom.roomName, self.socketRoom.userName]];
-//    }
-//    
-//    [self viewDidLoad];
+    //    int waiting = 1;
+    //    if (true) {
+    //        NSDictionary *dictData = @{@"waiting":@(waiting)};
+    //        NSString *strData = [Utils stringJSONByDictionary:dictData];
+    //
+    //        [self.socketRoom.socket emit:@"messageAgain" withItems:@[strData, self.socketRoom.roomName, self.socketRoom.userName]];
+    //    }
+    //
+    //    [self viewDidLoad];
     UIAlertController * alert=   [UIAlertController
                                   alertControllerWithTitle:@"PLAY AGAIN"
                                   message:@"Do you want to play again?"
@@ -530,8 +576,18 @@
 
 
 #pragma mark - Call chat box
-- (void) btnGoChatBoxTouchUpInside : (id) sender {
+- (void) goChat {
     
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    _chatBoxVC = [storyboard instantiateViewControllerWithIdentifier:@"ChatBoxID"];
+    
+    UIView* myView = _chatBoxVC.view;
+    UIWindow* currentWindow = [UIApplication sharedApplication].keyWindow;
+    [currentWindow addSubview:myView];
+}
+
+- (void) btnGoChatBoxTouchUpInside : (id) sender {
+    [self goChat];
 }
 
 

@@ -32,9 +32,23 @@
 
 - (void) chooseGame {
     if (_txtUsername.text.length == 0) {
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"ERROR" message:@"Please input Username" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        NSLog(@"2");
-        [alert show];
+//        UIAlertController * alert=   [UIAlertController
+//                                      alertControllerWithTitle:@"ERROR"
+//                                      message:@"Username is invalid"
+//                                      preferredStyle:UIAlertControllerStyleAlert];
+//        
+//        UIAlertAction* btnOK = [UIAlertAction
+//                                    actionWithTitle:@"OK"
+//                                    style:UIAlertActionStyleDefault
+//                                    handler:^(UIAlertAction * action)
+//                                    {
+//                                        
+//                                    }];
+//
+//        
+//        [alert addAction:btnOK];
+        UIAlertView *alert1 = [[UIAlertView alloc] initWithTitle:@"ERROR" message:@"Username is invalid" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert1 show];
     } else {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         _chooseVC = [storyboard instantiateViewControllerWithIdentifier:@"ChooseGameID"];

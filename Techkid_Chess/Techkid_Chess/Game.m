@@ -147,8 +147,12 @@
             // Check if this new board matches the previous board
             if([self.goban isEqualToArray:self.previousStateOfBoard]) {
                 //Show warning
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Ko" message:@"" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-                [alert show];
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"KO" message:nil preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertAction *btnOK = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                    
+                }];
+                
+                [alert addAction:btnOK];
                 koFound = YES;
             }
             

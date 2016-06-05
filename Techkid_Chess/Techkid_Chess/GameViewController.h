@@ -11,6 +11,7 @@
 #import "GameConstants.h"
 #import "Goban.h"
 #import "ChatRoomViewController.h"
+#import "ChatBoxViewController.h"
 @interface GameViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *blackRemainingTimeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *whiteRemainingTimeLabel;
@@ -18,7 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *whiteCapturedStoneCountLabel;
 @property (nonatomic, strong) NSTimer *gameClock;
 @property (nonatomic, strong) Game *game;
-
+@property ChatBoxViewController *chatBoxVC;
 @property NSString *username;
 
 @end

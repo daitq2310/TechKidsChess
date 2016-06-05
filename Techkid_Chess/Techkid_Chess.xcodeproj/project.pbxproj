@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		321C18951D03DE6700CBBC6C /* MCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 321C18941D03DE6700CBBC6C /* MCManager.m */; };
+		321C18971D04425900CBBC6C /* btnSend.png in Resources */ = {isa = PBXBuildFile; fileRef = 321C18961D04425900CBBC6C /* btnSend.png */; };
 		322904AC1CFAD3C000ACCCEE /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322904AB1CFAD3C000ACCCEE /* GameViewController.m */; };
 		322904AF1CFAD3CF00ACCCEE /* Goban.m in Sources */ = {isa = PBXBuildFile; fileRef = 322904AE1CFAD3CF00ACCCEE /* Goban.m */; };
 		322904B21CFAD3D600ACCCEE /* Stone.m in Sources */ = {isa = PBXBuildFile; fileRef = 322904B11CFAD3D600ACCCEE /* Stone.m */; };
@@ -64,6 +66,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		321C18931D03DE6700CBBC6C /* MCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCManager.h; sourceTree = "<group>"; };
+		321C18941D03DE6700CBBC6C /* MCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCManager.m; sourceTree = "<group>"; };
+		321C18961D04425900CBBC6C /* btnSend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btnSend.png; sourceTree = "<group>"; };
 		322904A91CFAD3C000ACCCEE /* GameConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConstants.h; sourceTree = "<group>"; };
 		322904AA1CFAD3C000ACCCEE /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		322904AB1CFAD3C000ACCCEE /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
@@ -225,6 +230,7 @@
 		322904BE1CFAD71E00ACCCEE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				321C18961D04425900CBBC6C /* btnSend.png */,
 				328F95F01CFAE4B000110D8C /* CoreData.framework */,
 				322904BF1CFAD72900ACCCEE /* Image */,
 			);
@@ -256,6 +262,8 @@
 				322904D41CFADB8800ACCCEE /* ChatBoxViewController.m */,
 				328F95E61CFAE16800110D8C /* ChatCell.h */,
 				328F95E71CFAE16800110D8C /* ChatCell.m */,
+				321C18931D03DE6700CBBC6C /* MCManager.h */,
+				321C18941D03DE6700CBBC6C /* MCManager.m */,
 			);
 			name = ChatBox;
 			sourceTree = "<group>";
@@ -446,6 +454,7 @@
 				322904CD1CFAD7B500ACCCEE /* back.png in Resources */,
 				322904C41CFAD73D00ACCCEE /* GoBoardIcon.png in Resources */,
 				46E5C0181CF9A796002A7887 /* Main.storyboard in Resources */,
+				321C18971D04425900CBBC6C /* btnSend.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +490,7 @@
 				46E5C0121CF9A796002A7887 /* AppDelegate.m in Sources */,
 				328F95ED1CFAE40400110D8C /* Message+CoreDataProperties.m in Sources */,
 				46E5C0991CF9A7AD002A7887 /* SocketEngineWebsocket.swift in Sources */,
+				321C18951D03DE6700CBBC6C /* MCManager.m in Sources */,
 				46E5C0711CF9A7AD002A7887 /* IOMessage+CoreDataProperties.m in Sources */,
 				46E5C0721CF9A7AD002A7887 /* IOMessage.m in Sources */,
 				46E5C0981CF9A7AD002A7887 /* SocketEngineSpec.swift in Sources */,
