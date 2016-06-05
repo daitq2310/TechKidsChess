@@ -1,0 +1,674 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		322904AC1CFAD3C000ACCCEE /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322904AB1CFAD3C000ACCCEE /* GameViewController.m */; };
+		322904AF1CFAD3CF00ACCCEE /* Goban.m in Sources */ = {isa = PBXBuildFile; fileRef = 322904AE1CFAD3CF00ACCCEE /* Goban.m */; };
+		322904B21CFAD3D600ACCCEE /* Stone.m in Sources */ = {isa = PBXBuildFile; fileRef = 322904B11CFAD3D600ACCCEE /* Stone.m */; };
+		322904BA1CFAD4DB00ACCCEE /* ChooseGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322904B91CFAD4DB00ACCCEE /* ChooseGameViewController.m */; };
+		322904BD1CFAD66200ACCCEE /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 322904BC1CFAD66200ACCCEE /* Game.m */; };
+		322904C31CFAD73D00ACCCEE /* ChineseChessBoardIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 322904C01CFAD73D00ACCCEE /* ChineseChessBoardIcon.png */; };
+		322904C41CFAD73D00ACCCEE /* GoBoardIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 322904C11CFAD73D00ACCCEE /* GoBoardIcon.png */; };
+		322904C51CFAD73D00ACCCEE /* ChessBoardIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 322904C21CFAD73D00ACCCEE /* ChessBoardIcon.png */; };
+		322904CA1CFAD7B500ACCCEE /* Goban.png in Resources */ = {isa = PBXBuildFile; fileRef = 322904C61CFAD7B500ACCCEE /* Goban.png */; };
+		322904CB1CFAD7B500ACCCEE /* Logo.Png in Resources */ = {isa = PBXBuildFile; fileRef = 322904C71CFAD7B500ACCCEE /* Logo.Png */; };
+		322904CD1CFAD7B500ACCCEE /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 322904C91CFAD7B500ACCCEE /* back.png */; };
+		322904D01CFAD83400ACCCEE /* blackStone.png in Resources */ = {isa = PBXBuildFile; fileRef = 322904CE1CFAD83400ACCCEE /* blackStone.png */; };
+		322904D11CFAD83400ACCCEE /* whiteStone.png in Resources */ = {isa = PBXBuildFile; fileRef = 322904CF1CFAD83400ACCCEE /* whiteStone.png */; };
+		322904D51CFADB8800ACCCEE /* ChatBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322904D41CFADB8800ACCCEE /* ChatBoxViewController.m */; };
+		328F95E81CFAE16800110D8C /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 328F95E71CFAE16800110D8C /* ChatCell.m */; };
+		328F95ED1CFAE40400110D8C /* Message+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 328F95EA1CFAE40400110D8C /* Message+CoreDataProperties.m */; };
+		328F95EE1CFAE40400110D8C /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 328F95EC1CFAE40400110D8C /* Message.m */; };
+		328F95F11CFAE4B000110D8C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 328F95F01CFAE4B000110D8C /* CoreData.framework */; };
+		329A09711CFAEBD9005CD061 /* troll2.png in Resources */ = {isa = PBXBuildFile; fileRef = 329A09701CFAEBD9005CD061 /* troll2.png */; };
+		32D0AB471D02ED27008B8D22 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 32D0AB451D02ED27008B8D22 /* chat.png */; };
+		32D0AB481D02ED27008B8D22 /* again.png in Resources */ = {isa = PBXBuildFile; fileRef = 32D0AB461D02ED27008B8D22 /* again.png */; };
+		46E5C00F1CF9A796002A7887 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C00E1CF9A796002A7887 /* main.m */; };
+		46E5C0121CF9A796002A7887 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0111CF9A796002A7887 /* AppDelegate.m */; };
+		46E5C0151CF9A796002A7887 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0141CF9A796002A7887 /* ViewController.m */; };
+		46E5C0181CF9A796002A7887 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E5C0161CF9A796002A7887 /* Main.storyboard */; };
+		46E5C01A1CF9A796002A7887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46E5C0191CF9A796002A7887 /* Assets.xcassets */; };
+		46E5C01D1CF9A796002A7887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46E5C01B1CF9A796002A7887 /* LaunchScreen.storyboard */; };
+		46E5C06E1CF9A7AD002A7887 /* ChatData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0251CF9A7AD002A7887 /* ChatData.xcdatamodeld */; };
+		46E5C06F1CF9A7AD002A7887 /* ChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0281CF9A7AD002A7887 /* ChatRoomViewController.m */; };
+		46E5C0711CF9A7AD002A7887 /* IOMessage+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C02D1CF9A7AD002A7887 /* IOMessage+CoreDataProperties.m */; };
+		46E5C0721CF9A7AD002A7887 /* IOMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C02F1CF9A7AD002A7887 /* IOMessage.m */; };
+		46E5C0731CF9A7AD002A7887 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0311CF9A7AD002A7887 /* DataManager.m */; };
+		46E5C08F1CF9A7AD002A7887 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0571CF9A7AD002A7887 /* Utils.m */; };
+		46E5C0901CF9A7AD002A7887 /* SocketAckEmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0591CF9A7AD002A7887 /* SocketAckEmitter.swift */; };
+		46E5C0911CF9A7AD002A7887 /* SocketAckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C05A1CF9A7AD002A7887 /* SocketAckManager.swift */; };
+		46E5C0921CF9A7AD002A7887 /* SocketAnyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C05B1CF9A7AD002A7887 /* SocketAnyEvent.swift */; };
+		46E5C0931CF9A7AD002A7887 /* SocketClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C05C1CF9A7AD002A7887 /* SocketClientSpec.swift */; };
+		46E5C0941CF9A7AD002A7887 /* SocketEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C05D1CF9A7AD002A7887 /* SocketEngine.swift */; };
+		46E5C0951CF9A7AD002A7887 /* SocketEngineClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C05E1CF9A7AD002A7887 /* SocketEngineClient.swift */; };
+		46E5C0961CF9A7AD002A7887 /* SocketEnginePacketType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C05F1CF9A7AD002A7887 /* SocketEnginePacketType.swift */; };
+		46E5C0971CF9A7AD002A7887 /* SocketEnginePollable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0601CF9A7AD002A7887 /* SocketEnginePollable.swift */; };
+		46E5C0981CF9A7AD002A7887 /* SocketEngineSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0611CF9A7AD002A7887 /* SocketEngineSpec.swift */; };
+		46E5C0991CF9A7AD002A7887 /* SocketEngineWebsocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0621CF9A7AD002A7887 /* SocketEngineWebsocket.swift */; };
+		46E5C09A1CF9A7AD002A7887 /* SocketEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0631CF9A7AD002A7887 /* SocketEventHandler.swift */; };
+		46E5C09B1CF9A7AD002A7887 /* SocketIOClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0641CF9A7AD002A7887 /* SocketIOClient.swift */; };
+		46E5C09C1CF9A7AD002A7887 /* SocketIOClientOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0651CF9A7AD002A7887 /* SocketIOClientOption.swift */; };
+		46E5C09D1CF9A7AD002A7887 /* SocketIOClientStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0661CF9A7AD002A7887 /* SocketIOClientStatus.swift */; };
+		46E5C09E1CF9A7AD002A7887 /* SocketLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0671CF9A7AD002A7887 /* SocketLogger.swift */; };
+		46E5C09F1CF9A7AD002A7887 /* SocketPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0681CF9A7AD002A7887 /* SocketPacket.swift */; };
+		46E5C0A01CF9A7AD002A7887 /* SocketParsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C0691CF9A7AD002A7887 /* SocketParsable.swift */; };
+		46E5C0A11CF9A7AD002A7887 /* SocketStringReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C06A1CF9A7AD002A7887 /* SocketStringReader.swift */; };
+		46E5C0A21CF9A7AD002A7887 /* SocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C06B1CF9A7AD002A7887 /* SocketTypes.swift */; };
+		46E5C0A31CF9A7AD002A7887 /* SwiftRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C06C1CF9A7AD002A7887 /* SwiftRegex.swift */; };
+		46E5C0A41CF9A7AD002A7887 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E5C06D1CF9A7AD002A7887 /* WebSocket.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		322904A91CFAD3C000ACCCEE /* GameConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameConstants.h; sourceTree = "<group>"; };
+		322904AA1CFAD3C000ACCCEE /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		322904AB1CFAD3C000ACCCEE /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		322904AD1CFAD3CF00ACCCEE /* Goban.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goban.h; sourceTree = "<group>"; };
+		322904AE1CFAD3CF00ACCCEE /* Goban.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goban.m; sourceTree = "<group>"; };
+		322904B01CFAD3D600ACCCEE /* Stone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stone.h; sourceTree = "<group>"; };
+		322904B11CFAD3D600ACCCEE /* Stone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stone.m; sourceTree = "<group>"; };
+		322904B81CFAD4DB00ACCCEE /* ChooseGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseGameViewController.h; sourceTree = "<group>"; };
+		322904B91CFAD4DB00ACCCEE /* ChooseGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseGameViewController.m; sourceTree = "<group>"; };
+		322904BB1CFAD66200ACCCEE /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		322904BC1CFAD66200ACCCEE /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		322904C01CFAD73D00ACCCEE /* ChineseChessBoardIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChineseChessBoardIcon.png; sourceTree = "<group>"; };
+		322904C11CFAD73D00ACCCEE /* GoBoardIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GoBoardIcon.png; sourceTree = "<group>"; };
+		322904C21CFAD73D00ACCCEE /* ChessBoardIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChessBoardIcon.png; sourceTree = "<group>"; };
+		322904C61CFAD7B500ACCCEE /* Goban.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Goban.png; sourceTree = "<group>"; };
+		322904C71CFAD7B500ACCCEE /* Logo.Png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.Png; sourceTree = "<group>"; };
+		322904C91CFAD7B500ACCCEE /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		322904CE1CFAD83400ACCCEE /* blackStone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackStone.png; sourceTree = "<group>"; };
+		322904CF1CFAD83400ACCCEE /* whiteStone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteStone.png; sourceTree = "<group>"; };
+		322904D31CFADB8800ACCCEE /* ChatBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatBoxViewController.h; sourceTree = "<group>"; };
+		322904D41CFADB8800ACCCEE /* ChatBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatBoxViewController.m; sourceTree = "<group>"; };
+		328F95E61CFAE16800110D8C /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		328F95E71CFAE16800110D8C /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
+		328F95E91CFAE40400110D8C /* Message+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Message+CoreDataProperties.h"; path = "../Message+CoreDataProperties.h"; sourceTree = "<group>"; };
+		328F95EA1CFAE40400110D8C /* Message+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Message+CoreDataProperties.m"; path = "../Message+CoreDataProperties.m"; sourceTree = "<group>"; };
+		328F95EB1CFAE40400110D8C /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Message.h; path = ../Message.h; sourceTree = "<group>"; };
+		328F95EC1CFAE40400110D8C /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Message.m; path = ../Message.m; sourceTree = "<group>"; };
+		328F95F01CFAE4B000110D8C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		329A09701CFAEBD9005CD061 /* troll2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = troll2.png; sourceTree = "<group>"; };
+		32D0AB451D02ED27008B8D22 /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chat.png; sourceTree = "<group>"; };
+		32D0AB461D02ED27008B8D22 /* again.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = again.png; sourceTree = "<group>"; };
+		46E5C00A1CF9A796002A7887 /* Techkid_Chess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Techkid_Chess.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		46E5C00E1CF9A796002A7887 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		46E5C0101CF9A796002A7887 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		46E5C0111CF9A796002A7887 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		46E5C0131CF9A796002A7887 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		46E5C0141CF9A796002A7887 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		46E5C0171CF9A796002A7887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		46E5C0191CF9A796002A7887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46E5C01C1CF9A796002A7887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		46E5C01E1CF9A796002A7887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46E5C0261CF9A7AD002A7887 /* ChatData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChatData.xcdatamodel; sourceTree = "<group>"; };
+		46E5C0271CF9A7AD002A7887 /* ChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRoomViewController.h; sourceTree = "<group>"; };
+		46E5C0281CF9A7AD002A7887 /* ChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRoomViewController.m; sourceTree = "<group>"; };
+		46E5C02C1CF9A7AD002A7887 /* IOMessage+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IOMessage+CoreDataProperties.h"; sourceTree = "<group>"; };
+		46E5C02D1CF9A7AD002A7887 /* IOMessage+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IOMessage+CoreDataProperties.m"; sourceTree = "<group>"; };
+		46E5C02E1CF9A7AD002A7887 /* IOMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOMessage.h; sourceTree = "<group>"; };
+		46E5C02F1CF9A7AD002A7887 /* IOMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOMessage.m; sourceTree = "<group>"; };
+		46E5C0301CF9A7AD002A7887 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		46E5C0311CF9A7AD002A7887 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		46E5C0561CF9A7AD002A7887 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		46E5C0571CF9A7AD002A7887 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		46E5C0591CF9A7AD002A7887 /* SocketAckEmitter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckEmitter.swift; sourceTree = "<group>"; };
+		46E5C05A1CF9A7AD002A7887 /* SocketAckManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAckManager.swift; sourceTree = "<group>"; };
+		46E5C05B1CF9A7AD002A7887 /* SocketAnyEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketAnyEvent.swift; sourceTree = "<group>"; };
+		46E5C05C1CF9A7AD002A7887 /* SocketClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketClientSpec.swift; sourceTree = "<group>"; };
+		46E5C05D1CF9A7AD002A7887 /* SocketEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEngine.swift; sourceTree = "<group>"; };
+		46E5C05E1CF9A7AD002A7887 /* SocketEngineClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEngineClient.swift; sourceTree = "<group>"; };
+		46E5C05F1CF9A7AD002A7887 /* SocketEnginePacketType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEnginePacketType.swift; sourceTree = "<group>"; };
+		46E5C0601CF9A7AD002A7887 /* SocketEnginePollable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEnginePollable.swift; sourceTree = "<group>"; };
+		46E5C0611CF9A7AD002A7887 /* SocketEngineSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEngineSpec.swift; sourceTree = "<group>"; };
+		46E5C0621CF9A7AD002A7887 /* SocketEngineWebsocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEngineWebsocket.swift; sourceTree = "<group>"; };
+		46E5C0631CF9A7AD002A7887 /* SocketEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketEventHandler.swift; sourceTree = "<group>"; };
+		46E5C0641CF9A7AD002A7887 /* SocketIOClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClient.swift; sourceTree = "<group>"; };
+		46E5C0651CF9A7AD002A7887 /* SocketIOClientOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClientOption.swift; sourceTree = "<group>"; };
+		46E5C0661CF9A7AD002A7887 /* SocketIOClientStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketIOClientStatus.swift; sourceTree = "<group>"; };
+		46E5C0671CF9A7AD002A7887 /* SocketLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketLogger.swift; sourceTree = "<group>"; };
+		46E5C0681CF9A7AD002A7887 /* SocketPacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketPacket.swift; sourceTree = "<group>"; };
+		46E5C0691CF9A7AD002A7887 /* SocketParsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketParsable.swift; sourceTree = "<group>"; };
+		46E5C06A1CF9A7AD002A7887 /* SocketStringReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketStringReader.swift; sourceTree = "<group>"; };
+		46E5C06B1CF9A7AD002A7887 /* SocketTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketTypes.swift; sourceTree = "<group>"; };
+		46E5C06C1CF9A7AD002A7887 /* SwiftRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRegex.swift; sourceTree = "<group>"; };
+		46E5C06D1CF9A7AD002A7887 /* WebSocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		46E5C0071CF9A796002A7887 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				328F95F11CFAE4B000110D8C /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		322904A11CFAD33D00ACCCEE /* Go Game */ = {
+			isa = PBXGroup;
+			children = (
+				328F95EF1CFAE40D00110D8C /* Messages */,
+				322904A81CFAD38400ACCCEE /* Game */,
+				322904A21CFAD34600ACCCEE /* Choose Game */,
+				322904A71CFAD37C00ACCCEE /* Stone */,
+				322904A61CFAD37100ACCCEE /* Goban */,
+				322904A51CFAD36700ACCCEE /* Game Play */,
+				322904A41CFAD36100ACCCEE /* Login */,
+				322904D21CFADB7700ACCCEE /* ChatBox */,
+				322904BE1CFAD71E00ACCCEE /* Supporting Files */,
+			);
+			name = "Go Game";
+			sourceTree = "<group>";
+		};
+		322904A21CFAD34600ACCCEE /* Choose Game */ = {
+			isa = PBXGroup;
+			children = (
+				322904B81CFAD4DB00ACCCEE /* ChooseGameViewController.h */,
+				322904B91CFAD4DB00ACCCEE /* ChooseGameViewController.m */,
+			);
+			name = "Choose Game";
+			sourceTree = "<group>";
+		};
+		322904A41CFAD36100ACCCEE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				46E5C0131CF9A796002A7887 /* ViewController.h */,
+				46E5C0141CF9A796002A7887 /* ViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		322904A51CFAD36700ACCCEE /* Game Play */ = {
+			isa = PBXGroup;
+			children = (
+				322904AA1CFAD3C000ACCCEE /* GameViewController.h */,
+				322904AB1CFAD3C000ACCCEE /* GameViewController.m */,
+			);
+			name = "Game Play";
+			sourceTree = "<group>";
+		};
+		322904A61CFAD37100ACCCEE /* Goban */ = {
+			isa = PBXGroup;
+			children = (
+				322904AD1CFAD3CF00ACCCEE /* Goban.h */,
+				322904AE1CFAD3CF00ACCCEE /* Goban.m */,
+			);
+			name = Goban;
+			sourceTree = "<group>";
+		};
+		322904A71CFAD37C00ACCCEE /* Stone */ = {
+			isa = PBXGroup;
+			children = (
+				322904B01CFAD3D600ACCCEE /* Stone.h */,
+				322904B11CFAD3D600ACCCEE /* Stone.m */,
+			);
+			name = Stone;
+			sourceTree = "<group>";
+		};
+		322904A81CFAD38400ACCCEE /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				322904A91CFAD3C000ACCCEE /* GameConstants.h */,
+				322904BB1CFAD66200ACCCEE /* Game.h */,
+				322904BC1CFAD66200ACCCEE /* Game.m */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		322904BE1CFAD71E00ACCCEE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				328F95F01CFAE4B000110D8C /* CoreData.framework */,
+				322904BF1CFAD72900ACCCEE /* Image */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		322904BF1CFAD72900ACCCEE /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				32D0AB451D02ED27008B8D22 /* chat.png */,
+				32D0AB461D02ED27008B8D22 /* again.png */,
+				329A09701CFAEBD9005CD061 /* troll2.png */,
+				322904C61CFAD7B500ACCCEE /* Goban.png */,
+				322904C71CFAD7B500ACCCEE /* Logo.Png */,
+				322904C91CFAD7B500ACCCEE /* back.png */,
+				322904C01CFAD73D00ACCCEE /* ChineseChessBoardIcon.png */,
+				322904C11CFAD73D00ACCCEE /* GoBoardIcon.png */,
+				322904C21CFAD73D00ACCCEE /* ChessBoardIcon.png */,
+				322904CE1CFAD83400ACCCEE /* blackStone.png */,
+				322904CF1CFAD83400ACCCEE /* whiteStone.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		322904D21CFADB7700ACCCEE /* ChatBox */ = {
+			isa = PBXGroup;
+			children = (
+				322904D31CFADB8800ACCCEE /* ChatBoxViewController.h */,
+				322904D41CFADB8800ACCCEE /* ChatBoxViewController.m */,
+				328F95E61CFAE16800110D8C /* ChatCell.h */,
+				328F95E71CFAE16800110D8C /* ChatCell.m */,
+			);
+			name = ChatBox;
+			sourceTree = "<group>";
+		};
+		328F95EF1CFAE40D00110D8C /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				328F95E91CFAE40400110D8C /* Message+CoreDataProperties.h */,
+				328F95EA1CFAE40400110D8C /* Message+CoreDataProperties.m */,
+				328F95EB1CFAE40400110D8C /* Message.h */,
+				328F95EC1CFAE40400110D8C /* Message.m */,
+			);
+			name = Messages;
+			sourceTree = "<group>";
+		};
+		46E5C0011CF9A796002A7887 = {
+			isa = PBXGroup;
+			children = (
+				46E5C00C1CF9A796002A7887 /* Techkid_Chess */,
+				46E5C00B1CF9A796002A7887 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		46E5C00B1CF9A796002A7887 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				46E5C00A1CF9A796002A7887 /* Techkid_Chess.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		46E5C00C1CF9A796002A7887 /* Techkid_Chess */ = {
+			isa = PBXGroup;
+			children = (
+				322904A11CFAD33D00ACCCEE /* Go Game */,
+				46E5C0241CF9A7AD002A7887 /* SocketIO */,
+				46E5C0101CF9A796002A7887 /* AppDelegate.h */,
+				46E5C0111CF9A796002A7887 /* AppDelegate.m */,
+				46E5C0161CF9A796002A7887 /* Main.storyboard */,
+				46E5C0191CF9A796002A7887 /* Assets.xcassets */,
+				46E5C01B1CF9A796002A7887 /* LaunchScreen.storyboard */,
+				46E5C01E1CF9A796002A7887 /* Info.plist */,
+				46E5C00D1CF9A796002A7887 /* Supporting Files */,
+			);
+			path = Techkid_Chess;
+			sourceTree = "<group>";
+		};
+		46E5C00D1CF9A796002A7887 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46E5C00E1CF9A796002A7887 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		46E5C0241CF9A7AD002A7887 /* SocketIO */ = {
+			isa = PBXGroup;
+			children = (
+				46E5C0251CF9A7AD002A7887 /* ChatData.xcdatamodeld */,
+				46E5C0271CF9A7AD002A7887 /* ChatRoomViewController.h */,
+				46E5C0281CF9A7AD002A7887 /* ChatRoomViewController.m */,
+				46E5C02B1CF9A7AD002A7887 /* CoreDataGenerated */,
+				46E5C0301CF9A7AD002A7887 /* DataManager.h */,
+				46E5C0311CF9A7AD002A7887 /* DataManager.m */,
+				46E5C0551CF9A7AD002A7887 /* SocketHelp */,
+				46E5C0581CF9A7AD002A7887 /* Source */,
+			);
+			path = SocketIO;
+			sourceTree = "<group>";
+		};
+		46E5C02B1CF9A7AD002A7887 /* CoreDataGenerated */ = {
+			isa = PBXGroup;
+			children = (
+				46E5C02C1CF9A7AD002A7887 /* IOMessage+CoreDataProperties.h */,
+				46E5C02D1CF9A7AD002A7887 /* IOMessage+CoreDataProperties.m */,
+				46E5C02E1CF9A7AD002A7887 /* IOMessage.h */,
+				46E5C02F1CF9A7AD002A7887 /* IOMessage.m */,
+			);
+			path = CoreDataGenerated;
+			sourceTree = "<group>";
+		};
+		46E5C0551CF9A7AD002A7887 /* SocketHelp */ = {
+			isa = PBXGroup;
+			children = (
+				46E5C0561CF9A7AD002A7887 /* Utils.h */,
+				46E5C0571CF9A7AD002A7887 /* Utils.m */,
+			);
+			path = SocketHelp;
+			sourceTree = "<group>";
+		};
+		46E5C0581CF9A7AD002A7887 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				46E5C0591CF9A7AD002A7887 /* SocketAckEmitter.swift */,
+				46E5C05A1CF9A7AD002A7887 /* SocketAckManager.swift */,
+				46E5C05B1CF9A7AD002A7887 /* SocketAnyEvent.swift */,
+				46E5C05C1CF9A7AD002A7887 /* SocketClientSpec.swift */,
+				46E5C05D1CF9A7AD002A7887 /* SocketEngine.swift */,
+				46E5C05E1CF9A7AD002A7887 /* SocketEngineClient.swift */,
+				46E5C05F1CF9A7AD002A7887 /* SocketEnginePacketType.swift */,
+				46E5C0601CF9A7AD002A7887 /* SocketEnginePollable.swift */,
+				46E5C0611CF9A7AD002A7887 /* SocketEngineSpec.swift */,
+				46E5C0621CF9A7AD002A7887 /* SocketEngineWebsocket.swift */,
+				46E5C0631CF9A7AD002A7887 /* SocketEventHandler.swift */,
+				46E5C0641CF9A7AD002A7887 /* SocketIOClient.swift */,
+				46E5C0651CF9A7AD002A7887 /* SocketIOClientOption.swift */,
+				46E5C0661CF9A7AD002A7887 /* SocketIOClientStatus.swift */,
+				46E5C0671CF9A7AD002A7887 /* SocketLogger.swift */,
+				46E5C0681CF9A7AD002A7887 /* SocketPacket.swift */,
+				46E5C0691CF9A7AD002A7887 /* SocketParsable.swift */,
+				46E5C06A1CF9A7AD002A7887 /* SocketStringReader.swift */,
+				46E5C06B1CF9A7AD002A7887 /* SocketTypes.swift */,
+				46E5C06C1CF9A7AD002A7887 /* SwiftRegex.swift */,
+				46E5C06D1CF9A7AD002A7887 /* WebSocket.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		46E5C0091CF9A796002A7887 /* Techkid_Chess */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46E5C0211CF9A796002A7887 /* Build configuration list for PBXNativeTarget "Techkid_Chess" */;
+			buildPhases = (
+				46E5C0061CF9A796002A7887 /* Sources */,
+				46E5C0071CF9A796002A7887 /* Frameworks */,
+				46E5C0081CF9A796002A7887 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Techkid_Chess;
+			productName = Techkid_Chess;
+			productReference = 46E5C00A1CF9A796002A7887 /* Techkid_Chess.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		46E5C0021CF9A796002A7887 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = TechKid;
+				TargetAttributes = {
+					46E5C0091CF9A796002A7887 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2QXC9R6MR6;
+					};
+				};
+			};
+			buildConfigurationList = 46E5C0051CF9A796002A7887 /* Build configuration list for PBXProject "Techkid_Chess" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 46E5C0011CF9A796002A7887;
+			productRefGroup = 46E5C00B1CF9A796002A7887 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				46E5C0091CF9A796002A7887 /* Techkid_Chess */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		46E5C0081CF9A796002A7887 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				322904CA1CFAD7B500ACCCEE /* Goban.png in Resources */,
+				32D0AB471D02ED27008B8D22 /* chat.png in Resources */,
+				322904D01CFAD83400ACCCEE /* blackStone.png in Resources */,
+				329A09711CFAEBD9005CD061 /* troll2.png in Resources */,
+				32D0AB481D02ED27008B8D22 /* again.png in Resources */,
+				322904C51CFAD73D00ACCCEE /* ChessBoardIcon.png in Resources */,
+				322904D11CFAD83400ACCCEE /* whiteStone.png in Resources */,
+				46E5C01D1CF9A796002A7887 /* LaunchScreen.storyboard in Resources */,
+				46E5C01A1CF9A796002A7887 /* Assets.xcassets in Resources */,
+				322904CB1CFAD7B500ACCCEE /* Logo.Png in Resources */,
+				322904C31CFAD73D00ACCCEE /* ChineseChessBoardIcon.png in Resources */,
+				322904CD1CFAD7B500ACCCEE /* back.png in Resources */,
+				322904C41CFAD73D00ACCCEE /* GoBoardIcon.png in Resources */,
+				46E5C0181CF9A796002A7887 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		46E5C0061CF9A796002A7887 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46E5C09D1CF9A7AD002A7887 /* SocketIOClientStatus.swift in Sources */,
+				322904BA1CFAD4DB00ACCCEE /* ChooseGameViewController.m in Sources */,
+				46E5C0961CF9A7AD002A7887 /* SocketEnginePacketType.swift in Sources */,
+				46E5C0951CF9A7AD002A7887 /* SocketEngineClient.swift in Sources */,
+				46E5C0941CF9A7AD002A7887 /* SocketEngine.swift in Sources */,
+				46E5C0901CF9A7AD002A7887 /* SocketAckEmitter.swift in Sources */,
+				46E5C0A01CF9A7AD002A7887 /* SocketParsable.swift in Sources */,
+				322904B21CFAD3D600ACCCEE /* Stone.m in Sources */,
+				46E5C0971CF9A7AD002A7887 /* SocketEnginePollable.swift in Sources */,
+				46E5C0931CF9A7AD002A7887 /* SocketClientSpec.swift in Sources */,
+				46E5C0A31CF9A7AD002A7887 /* SwiftRegex.swift in Sources */,
+				322904AF1CFAD3CF00ACCCEE /* Goban.m in Sources */,
+				46E5C0A41CF9A7AD002A7887 /* WebSocket.swift in Sources */,
+				46E5C08F1CF9A7AD002A7887 /* Utils.m in Sources */,
+				322904D51CFADB8800ACCCEE /* ChatBoxViewController.m in Sources */,
+				46E5C0151CF9A796002A7887 /* ViewController.m in Sources */,
+				46E5C09E1CF9A7AD002A7887 /* SocketLogger.swift in Sources */,
+				46E5C09B1CF9A7AD002A7887 /* SocketIOClient.swift in Sources */,
+				46E5C09F1CF9A7AD002A7887 /* SocketPacket.swift in Sources */,
+				46E5C09A1CF9A7AD002A7887 /* SocketEventHandler.swift in Sources */,
+				46E5C0921CF9A7AD002A7887 /* SocketAnyEvent.swift in Sources */,
+				322904AC1CFAD3C000ACCCEE /* GameViewController.m in Sources */,
+				46E5C0121CF9A796002A7887 /* AppDelegate.m in Sources */,
+				328F95ED1CFAE40400110D8C /* Message+CoreDataProperties.m in Sources */,
+				46E5C0991CF9A7AD002A7887 /* SocketEngineWebsocket.swift in Sources */,
+				46E5C0711CF9A7AD002A7887 /* IOMessage+CoreDataProperties.m in Sources */,
+				46E5C0721CF9A7AD002A7887 /* IOMessage.m in Sources */,
+				46E5C0981CF9A7AD002A7887 /* SocketEngineSpec.swift in Sources */,
+				322904BD1CFAD66200ACCCEE /* Game.m in Sources */,
+				46E5C0911CF9A7AD002A7887 /* SocketAckManager.swift in Sources */,
+				46E5C00F1CF9A796002A7887 /* main.m in Sources */,
+				46E5C0A11CF9A7AD002A7887 /* SocketStringReader.swift in Sources */,
+				46E5C06E1CF9A7AD002A7887 /* ChatData.xcdatamodeld in Sources */,
+				328F95E81CFAE16800110D8C /* ChatCell.m in Sources */,
+				46E5C09C1CF9A7AD002A7887 /* SocketIOClientOption.swift in Sources */,
+				46E5C0A21CF9A7AD002A7887 /* SocketTypes.swift in Sources */,
+				46E5C0731CF9A7AD002A7887 /* DataManager.m in Sources */,
+				328F95EE1CFAE40400110D8C /* Message.m in Sources */,
+				46E5C06F1CF9A7AD002A7887 /* ChatRoomViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		46E5C0161CF9A796002A7887 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46E5C0171CF9A796002A7887 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		46E5C01B1CF9A796002A7887 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46E5C01C1CF9A796002A7887 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		46E5C01F1CF9A796002A7887 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46E5C0201CF9A796002A7887 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46E5C0221CF9A796002A7887 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Techkid_Chess/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "techkid.Techkid-Chess";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		46E5C0231CF9A796002A7887 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = Techkid_Chess/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "techkid.Techkid-Chess";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		46E5C0051CF9A796002A7887 /* Build configuration list for PBXProject "Techkid_Chess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46E5C01F1CF9A796002A7887 /* Debug */,
+				46E5C0201CF9A796002A7887 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46E5C0211CF9A796002A7887 /* Build configuration list for PBXNativeTarget "Techkid_Chess" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46E5C0221CF9A796002A7887 /* Debug */,
+				46E5C0231CF9A796002A7887 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		46E5C0251CF9A7AD002A7887 /* ChatData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				46E5C0261CF9A7AD002A7887 /* ChatData.xcdatamodel */,
+			);
+			currentVersion = 46E5C0261CF9A7AD002A7887 /* ChatData.xcdatamodel */;
+			path = ChatData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 46E5C0021CF9A796002A7887 /* Project object */;
+}
